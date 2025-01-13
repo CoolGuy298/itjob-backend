@@ -29,21 +29,22 @@ app.use('/admin', AdminRoute);
 
 const PORT = process.env.PORT;
 
-const createIndexes = async () => {
-    try {
-        await connectWithDB();  // Ensure the database connection
-        await Job.createIndexes({ companyID: 1 });
-        await JobApplication.createIndexes({ jobId: 1 });
-        await JobApplication.createIndexes({ applicationDate: -1 });
-        console.log('Indexes created successfully!');
-    } catch (error) {
-        console.error('Error creating indexes:', error);
-    }
-};
+// const createIndexes = async () => {
+//     try {
+//         await connectWithDB();  // Ensure the database connection
+//         await Job.createIndexes({ companyID: 1 });
+//         await JobApplication.createIndexes({ jobId: 1 });
+//         await JobApplication.createIndexes({ applicationDate: -1 });
+//         console.log('Indexes created successfully!');
+//     } catch (error) {
+//         console.error('Error creating indexes:', error);
+//     }
+// };
 
 const startServer = async () => {
     try {
-        await createIndexes();  // Create indexes before starting the server
+        // await createIndexes();  
+        // Create indexes before starting the server
         const server = app.listen(PORT, () => console.log(`Server started on ${PORT}`));
     } catch (error) {
         console.error('Error starting server:', error);
