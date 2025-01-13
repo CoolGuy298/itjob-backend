@@ -12,7 +12,8 @@
 
     # Copy the rest of the application code to the container
     COPY . .
-
+    # Copy the .env file into the container
+     COPY .env .env
     # Expose the port your backend runs on
     EXPOSE 3000
 
