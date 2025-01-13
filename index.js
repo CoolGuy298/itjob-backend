@@ -43,6 +43,7 @@ const PORT = process.env.PORT;
 
 const startServer = async () => {
     try {
+        await connectWithDB();
         // await createIndexes();  
         // Create indexes before starting the server
         const server = app.listen(PORT, () => console.log(`Server started on ${PORT}`));
