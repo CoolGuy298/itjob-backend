@@ -17,6 +17,10 @@ const app = express();
 const corsOptions = {
     exposedHeaders: ['Content-Disposition'],
     origin: [process.env.FE_URL],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    exposedHeaders: ['Content-Disposition'], // Exposed headers (optional)
+    credentials: true, // Allow cookies (if needed)
 };
 app.use(cors(corsOptions));
 app.use(express.json());
