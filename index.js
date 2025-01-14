@@ -19,8 +19,8 @@ const corsOptions = {
     origin: ["https://itjob-frontend.onrender.com"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-    exposedHeaders: ['Content-Disposition'], // Exposed headers (optional)
-    credentials: true, // Allow cookies (if needed)
+ 
+   
 };
 app.use(cors(corsOptions));
 app.use(express.json());
