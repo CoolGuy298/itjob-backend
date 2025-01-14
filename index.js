@@ -16,10 +16,10 @@ const app = express();
 
 const corsOptions = {
     exposedHeaders: ['Content-Disposition'],
-    origin: ["https://itjob-frontend.onrender.com"],
+    origin: "*",
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
- 
+
    
 };
 app.use(cors(corsOptions));
