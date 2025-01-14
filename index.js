@@ -16,7 +16,7 @@ const app = express();
 
 const corsOptions = {
     exposedHeaders: ['Content-Disposition'],
-    origin: ["https://itjob-frontend.onrender.com/"],
+    origin: ["https://itjob-frontend.onrender.com"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     exposedHeaders: ['Content-Disposition'], // Exposed headers (optional)
